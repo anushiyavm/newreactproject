@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import add from "./images/user.png";
 
-function Login() {
+function Forgot() {
     let [email, setEmail] = useState("");
     let [msg, setMsg] = useState("");
     let [show, setShow] = useState(false);
@@ -14,7 +14,7 @@ function Login() {
         setDisable(true);
         setBtn("Verifying...");
         try {
-            let response = await fetch("http://localhost:2311/forgot", {
+            let response = await fetch("https://backendserver-af6p.onrender.com/forgot", {
                 method: "POST",
                 body: JSON.stringify(obj),
                 headers: {
@@ -86,4 +86,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Forgot;
