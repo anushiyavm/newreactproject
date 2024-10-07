@@ -14,7 +14,7 @@ function Login() {
         setDisable(true);
         setBtn("Verifying...");
         try {
-            const response = await fetch("http://localhost:2311/login", {
+            const response = await fetch("https://backendserver-af6p.onrender.com/login", {
                 method: "POST",
                 body: JSON.stringify(obj),
                 headers: {
