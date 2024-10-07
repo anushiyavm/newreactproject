@@ -12,7 +12,7 @@ const ProductList = () => {
     useEffect(() => {
         async function fetchProducts() {
             try {
-                let response = await fetch("http://localhost:2311/product/all", {
+                let response = await fetch("https://backendserver-af6p.onrender.com/product/all", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
