@@ -16,7 +16,7 @@ function Users() {
 
     useEffect(() => {
         async function findAll() {
-            let users = await fetch("http://localhost:2311/all/users", {
+            let users = await fetch("https://backendserver-af6p.onrender.com/all/users", {
                 method: "GET",
                 headers: {
                     "auth-token": `${token}`,
