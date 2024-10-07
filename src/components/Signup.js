@@ -19,7 +19,7 @@ function Signup() {
         setDisable(true);
         setBtn("Checking...");
         try {
-            const response = await fetch("http://localhost:2311/signup", {
+            const response = await fetch("https://backendserver-af6p.onrender.com/signup", {
                 method: "POST",
                 body: JSON.stringify(obj),
                 headers: {
