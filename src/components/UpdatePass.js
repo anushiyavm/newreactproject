@@ -14,7 +14,7 @@ function UpdatePass() {
     useEffect(() => {
 
         async function verifytoken() {
-            let isValid = await fetch(`http://localhost:2311/token-verify/${id}/${token}`, {
+            let isValid = await fetch(`https://backendserver-af6p.onrender.com/token-verify/${id}/${token}`, {
                 method: "GET",
                 headers: {
                     "Content-type": "application/json"
@@ -48,7 +48,7 @@ function UpdatePass() {
         setBtn("Updating...")
         setEnable(true);
         try {
-            let addUser = await fetch(`http://localhost:2311/update/${id}`, {
+            let addUser = await fetch(`https://backendserver-af6p.onrender.com/update/${id}`, {
                 method: "POST",
                 body: JSON.stringify(obj),
                 headers: {
